@@ -2,11 +2,12 @@ body {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  background-color: beige;
+  background-color: pink;
 }
 
 * {
   list-style-type: none;
+  border: 1px solid;
 }
 
 header,
@@ -46,6 +47,105 @@ label[for="hamburger-menu"] {
   position: absolute;
   right: 10px;
   top: 10px;
+}
+
+.cta,
+.herocta {
+  text-decoration: none;
+  background-color: #b0d200;
+  color: white;
+  margin: 0;
+  max-width: 30%;
+  padding: 3px 5px;
+}
+
+.herocta {
+  position: relative;
+  display: inline-block;
+  max-width: 200px;
+  top: -100px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 7px 20px;
+}
+
+.textbox {
+  background-color: black;
+  color: white;
+  width: 100%;
+}
+
+.aligned,
+h1,
+h2,
+h3,
+p {
+  padding: 10px 5px;
+  margin: 0;
+  color: white;
+}
+
+/* HOME */
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.container img {
+  max-width: 100%;
+  position: relative;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero .textbox {
+  position: relative;
+  top: -39px;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+.infobox {
+  background-color: #ff8c1a;
+  padding: 10px 0;
+}
+
+.infobox p {
+  color: black;
+  border: 1px solid white;
+  width: 70%;
+  margin: auto;
+}
+
+.red {
+  background-color: #e75f00;
+}
+
+.darkred-bg {
+  background-color: #883901;
+}
+
+.lightblue {
+  background-color: #63e7df;
+}
+
+.lightblue-bg {
+  background-color: #3e908c;
+}
+
+.darkblue {
+  background-color: #47d0f2;
+}
+
+.darkblue-bg {
+  background-color: #2c7e93;
 }
 
 @media screen and (min-width: 640px) {
