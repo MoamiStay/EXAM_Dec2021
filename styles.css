@@ -138,10 +138,10 @@ main {
   top: -39px;
 }
 
-h2,
-h1 {
+h2 {
   font-size: 1.8rem;
   padding: 40px 0 40px 5px;
+  border-left: 15px solid #47d0f2;
 }
 
 .infobox {
@@ -181,6 +181,7 @@ h1 {
 }
 
 /* EXHIBITION SPACES */
+
 .exhibit-space {
   height: 500px;
   display: flex;
@@ -199,9 +200,7 @@ h1 {
   background-size: cover;
 }
 
-.cosmology > h2 {
-  font-size: ;
-}
+/* EXPLLORE */
 
 @media screen and (min-width: 640px) {
   label[for="hamburger-menu"] {
