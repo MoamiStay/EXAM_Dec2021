@@ -8,7 +8,7 @@ body {
 * {
   list-style-type: none;
   text-decoration: none;
-  mborder: 1px solid;
+  border: 1px solid;
 }
 
 header img {
@@ -178,6 +178,29 @@ h1 {
 
 .darkblue-bg {
   background-color: #2c7e93;
+}
+
+/* EXHIBITION SPACES */
+.exhibit-space {
+  height: 500px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.exhibit-space > h2 {
+  order: 1;
+  padding: 0;
+  background-color: black;
+  opacity: 0.8;
+}
+
+.cosmology {
+  background-image: url(/images/skeletondino.jpg);
+  background-size: cover;
+}
+
+.cosmology > h2 {
+  font-size: ;
 }
 
 @media screen and (min-width: 640px) {
