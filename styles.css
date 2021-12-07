@@ -182,22 +182,16 @@ h2 {
 
 /* EXHIBITION SPACES */
 
-.exhibit-space {
-  height: 500px;
-  display: flex;
-  flex-direction: column-reverse;
+.exhibit-space img {
+  max-height: 500px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .exhibit-space > h2 {
-  order: 1;
   padding: 0;
   background-color: black;
   opacity: 0.8;
-}
-
-.cosmology {
-  background-image: url(/images/skeletondino.jpg);
-  background-size: cover;
 }
 
 /* EXPLLORE */
