@@ -16,7 +16,8 @@ main,
 .container,
 .exhibit-space,
 .button,
-.location {
+.location,
+.headline {
   display: flex;
   flex-direction: column;
 }
@@ -138,13 +139,12 @@ li {
 
 .container img {
   max-width: 100%;
-  position: relative;
 }
 
 .container > .cta,
 .container > div {
   position: relative;
-  top: -27px;
+  top: -28px;
 }
 
 .hero {
@@ -162,9 +162,14 @@ li {
   top: -39px;
 }
 
-h2 {
-  font-size: 1.8rem;
-  padding: 40px 0 40px 15px;
+.headline {
+  align-items: center;
+  padding: 20px 0;
+}
+
+.headline a {
+  color: white;
+  text-decoration: underline;
 }
 
 .infobox {
