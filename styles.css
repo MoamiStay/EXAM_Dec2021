@@ -22,9 +22,20 @@ main,
   flex-direction: column;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+}
+
 header img {
   max-height: 50px;
   background-color: white;
+}
+
+#title {
+  display: none;
 }
 
 nav {
@@ -137,7 +148,8 @@ li {
   align-items: flex-end;
 }
 
-.container img {
+.container img,
+.explore-section img {
   max-width: 100%;
 }
 
@@ -257,15 +269,26 @@ li {
     display: none;
   }
 
+  #logo {
+    height: 50px;
+    position: fixed;
+    left: 0px;
+    top: 10px;
+  }
+
+  #title {
+    font-size: 0.8rem;
+    display: block;
+  }
+
   header,
-  nav,
-  nav ul {
+  .top-menu {
     display: flex;
     flex-direction: row;
-    align-items: center;
   }
 
   nav {
+    display: flex;
     width: 90%;
     justify-content: flex-end;
   }
@@ -275,5 +298,11 @@ li {
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 100%;
     background-color: #505050;
+  }
+}
+
+@media screen and (min-width: 1007px) {
+  header {
+    background-color: red;
   }
 }
