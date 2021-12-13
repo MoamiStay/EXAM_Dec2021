@@ -2,7 +2,7 @@ body {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  background-color: white;
+  background-color: black;
 }
 
 * {
@@ -94,7 +94,8 @@ label[for="hamburger-menu"] {
   padding: 7px 20px;
 }
 
-.textbox {
+.textbox,
+.hoverbox {
   background-color: black;
   opacity: 0.8;
   color: white;
@@ -149,7 +150,8 @@ li {
 }
 
 .container img,
-.explore-section img {
+.explore-section img,
+.location img {
   max-width: 100%;
 }
 
@@ -169,7 +171,8 @@ li {
   max-width: 100%;
 }
 
-.hero .textbox {
+.hero .textbox,
+.hoverbox {
   position: relative;
   top: -39px;
 }
@@ -262,7 +265,10 @@ li {
   width: 45%;
 }
 
-/* EXPLLORE */
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr;
+}
 
 @media screen and (min-width: 640px) {
   label[for="hamburger-menu"] {
@@ -285,6 +291,7 @@ li {
   .top-menu {
     display: flex;
     flex-direction: row;
+    font-size: 0.8rem;
   }
 
   nav {
@@ -293,16 +300,94 @@ li {
     justify-content: flex-end;
   }
 
+  .hero {
+    align-items: flex-start;
+    margin: 0 0 -189px 0;
+  }
+
+  .hoverbox {
+    position: relative;
+    top: -250px;
+    left: 50px;
+    width: 50%;
+    height: 150px;
+  }
+
+  .herocta {
+    top: -60px;
+    left: 50px;
+  }
+
+  .container,
+  .explore-section {
+    display: block;
+    padding: 20px 15px 0px 15px;
+  }
+
+  .explore-together,
+  .special-event,
+  .explore-section,
+  .articles,
+  .news-section,
+  .special-events {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+
   footer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     max-width: 100%;
     background-color: #505050;
+  }
+
+  .exhibit-space > h2 {
+    color: white;
+    font-size: 6rem;
+    opacity: 0.9;
+  }
+
+  .buttons {
+    padding: 0 126.7px 0 126.7px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding-bottom: 50px;
+    background-color: #ff8c1a;
+  }
+
+  #visit {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto;
+    grid-template-areas: "info info" ". hours" ". hours" "location location";
+  }
+
+  .infobox {
+    grid-area: info;
+  }
+
+  .location {
+    grid-area: location;
+  }
+
+  .hours {
+    grid-area: hours;
+    padding: 0 20px 0 70px;
   }
 }
 
 @media screen and (min-width: 1007px) {
   header {
     background-color: red;
+  }
+
+  .buttons {
+    padding: 0 15px 0 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    padding-bottom: 100px;
   }
 }
