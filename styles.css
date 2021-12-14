@@ -27,6 +27,7 @@ header {
   top: 0;
   background-color: white;
   z-index: 1;
+  max-height: 60px;
 }
 
 .pooper ul,
@@ -50,8 +51,40 @@ header {
   align-items: center;
 }
 
+.active-page {
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+.exhibit-page a {
+  color: #ff8c1a;
+}
+
+.explore-page a {
+  color: #b0d200;
+}
+
+.events-page a {
+  color: #47d0f2;
+}
+
+.about-page a {
+  color: #e75f00;
+}
+
+.visit-page a {
+  color: #63e7df;
+}
+
+.link:hover,
+link:active {
+  text-decoration: underline;
+  color: #ff8c1a;
+}
+
 nav,
-.desktop {
+.desktop,
+.desktop-tablet {
   display: none;
 }
 
@@ -105,6 +138,7 @@ label[for="hamburger-menu"] {
   text-align: center;
   text-transform: uppercase;
   padding: 7px 20px;
+  transition-duration: 200ms;
 }
 
 .textbox,
@@ -145,7 +179,7 @@ li {
 
 footer {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 1fr;
   max-width: 100%;
   background-color: black;
   color: grey;
@@ -153,8 +187,18 @@ footer {
 }
 
 footer ul,
-li {
+li,
+.title,
+footer img {
   padding-left: 15px;
+}
+
+footer img {
+  width: 50px;
+}
+
+footer li {
+  padding: 3px 0;
 }
 
 /* HOME */
@@ -162,7 +206,7 @@ li {
 .container {
   align-items: flex-end;
   transition-duration: 200ms;
-  transition-delay: 00ms;
+  transition-delay: 200ms;
 }
 
 .container img,
@@ -200,7 +244,8 @@ li {
   padding: 20px 0;
 }
 
-.headline a:last-of-type {
+.headline a:last-of-type,
+.headline h2:hover {
   color: white;
   text-decoration: underline;
 }
@@ -318,6 +363,14 @@ li {
     display: none;
   }
 
+  .desktop-tablet {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+
   #title {
     font-size: 0.8rem;
     display: block;
@@ -379,9 +432,8 @@ li {
 
   footer {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     max-width: 100%;
-    background-color: #505050;
   }
 
   .exhibit-space > h2 {
@@ -587,11 +639,17 @@ li {
   }
 
   .menu-text {
-    font-size: 1.1rem;
-    padding: 10px 30px;
+    font-size: 1rem;
+    padding: 10px 20px;
   }
 
-  .container:hover {
+  .container:hover,
+  .herocta:hover,
+  .headline h2:hover {
     transform: scale(1.05, 1.05);
+  }
+
+  .active-page a {
+    font-size: 1.1rem;
   }
 }
