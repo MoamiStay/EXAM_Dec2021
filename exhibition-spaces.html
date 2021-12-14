@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="The Community Science Museum is a place where all young interested minds come together to learn and share knowledge."
+      content="The Community Science Museum offers exciting and interactive exhibitions on a wide variety of field such as Cosmology, Evolution, Biology, Ecology and Robotics."
     />
     <link
       rel="stylesheet"
@@ -21,24 +21,28 @@
       rel="stylesheet"
     />
     <link href="/styles.css" rel="stylesheet" />
-    <title>Home | Community Science Museum</title>
+    <title>Exhibitions | Community Science Museum</title>
   </head>
 
   <body>
     <header>
-      <a href="/index.html"
-        ><img
-          id="logo"
-          src="/images/icon-1719742.svg"
-          alt="Community Science Museum Logo."
-        />
-        <ul id="title">
-          <li>Community</li>
-          <li>Science</li>
-          <li>Museum</li>
-        </ul></a
-      >
-      <label for="hamburger-menu"><i class="far fa-grin-alt"></i></label>
+      <div class="pooper">
+        <a href="/index.html"
+          ><img
+            id="logo"
+            src="/images/icon-1719742.svg"
+            alt="Community Science Museum Logo."
+        /></a>
+        <a href="index.html">
+          <ul id="title">
+            <li>Community</li>
+            <li>Science</li>
+            <li>Museum</li>
+          </ul></a
+        >
+      </div>
+
+      <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
       <input type="checkbox" id="hamburger-menu" />
       <nav>
         <ul class="top-menu">
@@ -65,7 +69,13 @@
         </p>
       </section>
       <section class="cosmology exhibit-space">
-        <img src="images/galaxy-fix.jpg" alt="Outer cosmos" />
+        <picture>
+          <source srcset="images/galaxy-fix.jpg" media="(max-width: 640px)" />
+          <img
+            src="images/galaxyDESK.jpg"
+            alt="Galaxy with billions of stars and planets"
+          />
+        </picture>
         <h2>COSMOLOGY</h2>
       </section>
       <div class="darkblue-bg">
@@ -76,7 +86,16 @@
         </p>
       </div>
       <section class="evolution exhibit-space">
-        <img src="images/orangutang-fix.jpg" alt="an oranguetang on lookout" />
+        <picture>
+          <source
+            srcset="images/orangutang-fix.jpg"
+            media="(max-width: 640px)"
+          />
+          <img
+            src="images/orangutangDESK.jpg"
+            alt="An curious oranguetang looking around."
+          />
+        </picture>
         <h2>EVOLUTION</h2>
       </section>
       <div class="lightblue-bg">
@@ -87,7 +106,13 @@
         </p>
       </div>
       <section class="bio-med exhibit-space">
-        <img src="images/heart-fix.jpg" alt="an oranguetang on lookout" />
+        <picture>
+          <source srcset="images/heart-fix.jpg" media="(max-width: 640px)" />
+          <img
+            src="images/biologyDESK.jpg"
+            alt="A display figure showing the heart organ."
+          />
+        </picture>
         <h2>BIOLOGY AND MEDICINE</h2>
       </section>
       <div class="darkblue-bg">
@@ -98,10 +123,13 @@
         </p>
       </div>
       <section class="rob-ai exhibit-space">
-        <img
-          src="images/asimo-fix.jpg"
-          alt="A robot does a friendly greeting"
-        />
+        <picture>
+          <source srcset="images/asimo-fix.jpg" media="(max-width: 640px)" />
+          <img
+            src="images/asimoDESK.jpg"
+            alt="A friendly robot greeting people."
+          />
+        </picture>
         <h2>ROBOTICS AND AI</h2>
       </section>
       <div class="lightblue-bg">
@@ -112,10 +140,16 @@
         </p>
       </div>
       <section class="ecology exhibit-space">
-        <img
-          src="images/saveearth.jpg"
-          alt="Hand holding earth synbolizing our need to take care of it."
-        />
+        <picture>
+          <source
+            srcset="images/saveearth-fix.jpg"
+            media="(max-width: 640px)"
+          />
+          <img
+            src="images/saveearthDESK.jpg"
+            alt="Hands holding earth. Symbolic of taking better care of the planet."
+          />
+        </picture>
         <h2>ECOLOGY</h2>
       </section>
       <div class="darkblue-bg">

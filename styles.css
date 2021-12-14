@@ -29,14 +29,29 @@ header {
   z-index: 1;
 }
 
-header img {
-  max-height: 50px;
-  background-color: white;
+.pooper ul,
+.pooper a,
+.pooper li {
+  padding: 0;
+  margin: 0;
+}
+
+.pooper {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+#logo {
+  width: 70px;
+}
+
+.fas {
+  align-items: center;
 }
 
 nav,
-.desktop,
-#title {
+.desktop {
   display: none;
 }
 
@@ -67,10 +82,10 @@ nav li {
 }
 
 label[for="hamburger-menu"] {
-  font-size: 2em;
+  font-size: 2.6em;
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 15px;
+  top: 15px;
 }
 
 .cta,
@@ -303,13 +318,6 @@ li {
     display: none;
   }
 
-  #logo {
-    height: 50px;
-    position: fixed;
-    left: 0px;
-    top: 10px;
-  }
-
   #title {
     font-size: 0.8rem;
     display: block;
@@ -417,6 +425,12 @@ li {
 }
 
 @media screen and (min-width: 1007px) {
+  .exhibit-space img {
+    max-height: 800px;
+    width: 100%;
+    object-fit: cover;
+  }
+
   .buttons {
     padding: 0 15px 0 15px;
     display: grid;
@@ -475,7 +489,8 @@ li {
   }
 
   .explore-together {
-    gap: 0;
+    gap: 5px;
+    padding: 20px;
   }
 
   .articles,
@@ -560,7 +575,8 @@ li {
     padding: 40px;
   }
 
-  h1 {
+  h1,
+  .get-involved-title {
     font-size: 3rem;
     padding: 0;
     max-width: 30%;
