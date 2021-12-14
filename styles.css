@@ -34,11 +34,9 @@ header img {
   background-color: white;
 }
 
+nav,
+.desktop,
 #title {
-  display: none;
-}
-
-nav {
   display: none;
 }
 
@@ -100,6 +98,7 @@ label[for="hamburger-menu"] {
   opacity: 0.8;
   color: white;
   max-width: 100%;
+  overflow: hidden;
 }
 
 .aligned,
@@ -147,12 +146,16 @@ li {
 
 .container {
   align-items: flex-end;
+  transition-duration: 200ms;
+  transition-delay: 00ms;
 }
 
 .container img,
 .explore-section img,
 .location img {
-  max-width: 100%;
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .container > .cta,
@@ -182,7 +185,7 @@ li {
   padding: 20px 0;
 }
 
-.headline a {
+.headline a:last-of-type {
   color: white;
   text-decoration: underline;
 }
@@ -198,7 +201,7 @@ li {
   border: 1px solid white;
   width: 70%;
   margin: auto;
-  font-size: 0.7rem;
+  font-size: 1rem;
   padding: 15px;
 }
 
@@ -260,14 +263,39 @@ li {
   align-items: center;
 }
 
+.button-1 {
+  background-color: #63e7df;
+}
+
+.button-2 {
+  background-color: #47d0f2;
+}
+
+.button-3 {
+  background-color: #2c7e93;
+}
+
 .button p {
   border: 1px solid white;
   width: 45%;
 }
 
+.button:active {
+  opacity: 0.9;
+  border: 1px solid white;
+}
+
 .buttons {
   display: grid;
   grid-template-columns: 1fr;
+}
+
+.bulk-text {
+  padding: 15px;
+}
+
+.container:active {
+  transform: scale(0.95, 0.95);
 }
 
 @media screen and (min-width: 640px) {
@@ -324,6 +352,12 @@ li {
     padding: 20px 15px 0px 15px;
   }
 
+  .container > .cta,
+  .container > div {
+    position: relative;
+    top: -32px;
+  }
+
   .explore-together,
   .special-event,
   .explore-section,
@@ -332,7 +366,7 @@ li {
   .special-events {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 10px;
   }
 
   footer {
@@ -376,6 +410,10 @@ li {
     grid-area: hours;
     padding: 0 20px 0 70px;
   }
+
+  .textbox {
+    height: 150px;
+  }
 }
 
 @media screen and (min-width: 1007px) {
@@ -383,8 +421,36 @@ li {
     padding: 0 15px 0 15px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 15px;
+    gap: 17px;
     padding-bottom: 100px;
+  }
+
+  .button p {
+    width: 80%;
+  }
+
+  .button {
+    transition-duration: 500ms;
+  }
+
+  .button:hover {
+    transform: scale(1.05, 1.05);
+  }
+
+  .button-1:hover {
+    background-image: linear-gradient(145deg, #63e7df, #47d0f2, #2c7e93);
+  }
+
+  .button-2:hover {
+    background-image: linear-gradient(145deg, #47d0f2, #63e7df, #2c7e93);
+  }
+
+  .button-3:hover {
+    background-image: linear-gradient(145deg, #2c7e93, #47d0f2);
+  }
+
+  .desktop {
+    display: block;
   }
 
   .container .cta {
@@ -395,18 +461,64 @@ li {
     top: -5px;
   }
 
+  .container {
+    padding: 0;
+  }
+
+  .clubs-desktop {
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+  .clubs-desktop .textbox > p {
+    display: none;
+  }
+
+  .explore-together {
+    gap: 0;
+  }
+
   .articles,
   .news-section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+  }
+
+  .explore-section,
+  .articles,
+  .news-section,
+  .special-events {
+    gap: 30px;
+  }
+
+  .special-event {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "event-info . "
+      "event-info . ";
+    gap: 50px;
+  }
+
+  .event-info {
+    grid-area: event-info;
+    border: solid 1px white;
+    padding: 10px;
+  }
+
+  .event-info p {
   }
 
   .hoverbox {
     position: relative;
-    top: -350px;
+    top: -390px;
     left: 100px;
     font-size: 1.2rem;
+    padding: 20px;
+  }
+
+  .hoverbox h3 {
+    font-size: 1.8rem;
   }
 
   .herocta {
@@ -416,10 +528,9 @@ li {
   }
 
   .hero {
-    margin: 0 0 -211px 0;
+    margin: 0 0 -251px 0;
   }
 
-  .explore-together,
   .special-event,
   .articles,
   .explore-section,
@@ -433,6 +544,10 @@ li {
     align-items: flex-start;
     padding-left: 100px;
     flex-direction: row;
+  }
+
+  .headline h2 {
+    font-size: 2rem;
   }
 
   .headline a:last-of-type {
@@ -451,8 +566,16 @@ li {
     max-width: 30%;
   }
 
+  .bulk-text p {
+    width: 50%;
+  }
+
   .menu-text {
     font-size: 1.1rem;
     padding: 10px 30px;
+  }
+
+  .container:hover {
+    transform: scale(1.05, 1.05);
   }
 }
