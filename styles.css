@@ -14,6 +14,7 @@ body {
 main,
 .hero,
 .container,
+.quiz-container,
 .exhibit-space,
 .button,
 .location,
@@ -169,7 +170,8 @@ a {
   font-weight: normal;
 }
 
-p {
+p,
+ol li {
   font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
@@ -210,6 +212,7 @@ footer li {
 }
 
 .container img,
+.quiz-container img,
 .explore-section img,
 .location img {
   height: 300px;
@@ -358,6 +361,29 @@ footer li {
   transform: scale(0.95, 0.95);
 }
 
+.special-event {
+  background-color: #3e908c;
+}
+
+.quiz-side {
+  grid-area: quiz;
+  background-color: #63e7df;
+  padding: 20px;
+}
+
+.quiz-cta {
+  max-width: 100%;
+}
+
+.quiz-textbox {
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+aside i {
+  color: gold;
+}
+
 @media screen and (min-width: 640px) {
   label[for="hamburger-menu"] {
     display: none;
@@ -423,11 +449,41 @@ footer li {
   .special-event,
   .explore-section,
   .articles,
-  .news-section,
-  .special-events {
+  .news-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+  }
+
+  .special-event {
+    padding: 30px 30px;
+    background-color: #3e908c;
+    grid-template-columns: 60% auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "events quiz"
+      "events . "
+      "additional additional";
+    gap: 10px;
+  }
+
+  .quiz-container img {
+    max-height: 150px;
+  }
+
+  .additional {
+    grid-area: additional;
+  }
+
+  .events {
+    grid-area: events;
+  }
+
+  ol,
+  ol li {
+    padding: 0 0 0 20px;
+    margin-bottom: 5px;
+    list-style-type: decimal;
   }
 
   footer {
@@ -483,6 +539,10 @@ footer li {
     object-fit: cover;
   }
 
+  .desktop {
+    display: block;
+  }
+
   .buttons {
     padding: 0 15px 0 15px;
     display: grid;
@@ -499,24 +559,9 @@ footer li {
     transition-duration: 500ms;
   }
 
-  .button:hover {
-    transform: scale(1.05, 1.05);
-  }
-
-  .button-1:hover {
-    background-image: linear-gradient(145deg, #63e7df, #47d0f2, #2c7e93);
-  }
-
-  .button-2:hover {
-    background-image: linear-gradient(145deg, #47d0f2, #63e7df, #2c7e93);
-  }
-
-  .button-3:hover {
+  .button:hover,
+  .quiz-cta:hover {
     background-image: linear-gradient(145deg, #2c7e93, #47d0f2);
-  }
-
-  .desktop {
-    display: block;
   }
 
   .container .cta {
@@ -554,26 +599,24 @@ footer li {
   .explore-section,
   .articles,
   .news-section,
-  .special-events {
+  .events {
     gap: 30px;
   }
 
   .special-event {
-    grid-template-columns: 1fr 1fr;
+    padding: 30px 30px;
+    background-color: #3e908c;
+    grid-template-columns: auto auto auto 30%;
     grid-template-rows: auto;
     grid-template-areas:
-      "event-info . "
-      "event-info . ";
-    gap: 50px;
+      "events events events quiz"
+      "events events events quiz"
+      "additional additional additional additional";
   }
 
-  .event-info {
-    grid-area: event-info;
-    border: solid 1px white;
-    padding: 10px;
-  }
-
-  .event-info p {
+  .events {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   .hoverbox {
@@ -598,7 +641,6 @@ footer li {
     margin: 0 0 -251px 0;
   }
 
-  .special-event,
   .articles,
   .explore-section,
   .darkblue-bg,
