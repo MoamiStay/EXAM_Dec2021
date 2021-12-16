@@ -95,7 +95,7 @@ nav li {
 }
 
 .menu-text {
-  padding: 10px;
+  padding: 8px;
   text-align: center;
   color: black;
 }
@@ -172,7 +172,7 @@ h1,
 h2,
 h3,
 p {
-  padding: 10px 5px;
+  padding: 10px 5px 10px 20px;
   margin: 0;
   color: white;
 }
@@ -235,6 +235,23 @@ footer li {
   padding: 0;
 }
 
+.banner div {
+  position: relative;
+  top: -50px;
+  padding: 0;
+}
+
+.banner h3 {
+  text-align: center;
+  font-size: 2rem;
+  background-color: black;
+  opacity: 0.8;
+  position: relative;
+  top: -63px;
+  width: 100%;
+  padding: 10px 0;
+}
+
 .container img,
 .quiz-container img,
 .explore-section img,
@@ -262,7 +279,7 @@ footer li {
 
 .headline {
   align-items: center;
-  padding: 20px 0;
+  padding: 20px;
 }
 
 .headline a:last-of-type,
@@ -401,17 +418,44 @@ aside {
   background-color: #63e7df;
 }
 
+.advertisement {
+  position: relative;
+  top: -50px;
+}
+
+.advertisement div h3 {
+  font-size: 2rem;
+}
+
+.advertisement div p:last-of-type {
+  color: #e75f00;
+  font-weight: bolder;
+}
+
+.advertisement * {
+  max-width: 100%;
+  max-height: 100%;
+  background-color: white;
+  color: black;
+}
+
 @media screen and (min-width: 640px) {
   .mobile,
   label[for="hamburger-menu"] {
     display: none;
   }
 
+  .events,
+  .article-section {
+    padding-left: 20px;
+  }
+
   .desktop-tablet {
     display: block;
   }
 
-  #title {
+  #title,
+  .advertisement div p {
     font-size: 0.8rem;
     display: block;
   }
@@ -460,14 +504,33 @@ aside {
   }
 
   .explore-together,
-  .special-events-page,
   .explore-section,
-  .articles,
-  .news-section {
+  .articles {
     display: grid;
     padding: 50px 20px 0 25px;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+  }
+
+  .special-events-page {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "banner banner"
+      "headline headline"
+      "events events"
+      "events events";
+  }
+
+  .news-section {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "advert advert advert"
+      "newsline newsline newsline"
+      "article article article"
+      "article article article"
+      "article article article";
   }
 
   .special-event {
@@ -498,7 +561,42 @@ aside {
   }
 
   .events {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-area: events;
+  }
+
+  .article-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-area: article;
+  }
+
+  .banner {
+    max-width: 100%;
+    grid-area: banner;
+  }
+
+  .banner h3 {
+    top: -67px;
+  }
+
+  #headline {
+    font-size: 2.5rem;
+    grid-area: headline;
+    padding: 20px;
+  }
+
+  .advertisement {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-area: advert;
+  }
+
+  .advertisement div h3 {
+    font-size: 1.3rem;
   }
 
   ol,
@@ -623,6 +721,10 @@ aside {
       "ad ad ad ad";
   }
 
+  .article-section {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   .additionalsss {
     grid-area: ad;
   }
@@ -666,7 +768,6 @@ aside {
   .headline,
   .infobox {
     align-items: flex-start;
-    padding-left: 20px;
     flex-direction: row;
   }
 
@@ -683,7 +784,6 @@ aside {
   h1,
   .get-involved-title {
     font-size: 3rem;
-    padding: 0;
     max-width: 30%;
   }
 
@@ -730,5 +830,17 @@ aside {
 
   .container .red-border {
     top: -11px;
+  }
+
+  .advertisement div h3 {
+    font-size: 3rem;
+  }
+
+  .advertisement div p {
+    font-size: 1.2rem;
+  }
+
+  .advertisement div p:last-of-type {
+    margin-top: 20px;
   }
 }
