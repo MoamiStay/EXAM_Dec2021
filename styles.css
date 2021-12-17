@@ -37,6 +37,12 @@ header {
   margin: 0;
 }
 
+.pooper a:active,
+.pooper a:hover {
+  transform: none;
+  color: black;
+}
+
 .pooper {
   display: flex;
   align-items: center;
@@ -172,7 +178,8 @@ h1,
 h2,
 h3,
 p {
-  padding: 10px 5px 10px 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   margin: 0;
   color: white;
 }
@@ -187,7 +194,8 @@ a {
 }
 
 p,
-ol li {
+ol li,
+.hours {
   font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
@@ -211,7 +219,17 @@ footer {
 footer ul,
 li,
 .title,
-footer img {
+footer img,
+.visit p,
+.visit h2,
+table,
+#about h2,
+#about p,
+.advertisement p,
+.advertisement h3,
+h3,
+h2,
+p {
   padding-left: 15px;
 }
 
@@ -235,6 +253,14 @@ footer li {
   padding: 0;
 }
 
+.additionalsss .container h3 {
+  top: -100px;
+}
+
+.additionalsss .container {
+  transform: scale(1, 1);
+}
+
 .banner div {
   position: relative;
   top: -50px;
@@ -254,8 +280,7 @@ footer li {
 
 .container img,
 .quiz-container img,
-.explore-section img,
-.location img {
+.explore-section img {
   height: 200px;
   width: 100%;
   object-fit: cover;
@@ -279,7 +304,7 @@ footer li {
 
 .headline {
   align-items: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 .headline a:last-of-type,
@@ -408,6 +433,30 @@ footer li {
   margin-bottom: 20px;
 }
 
+.quiz-textbox p:last-of-type {
+  font-weight: bolder;
+  color: #e75f00;
+}
+
+.quiz-side > p {
+  color: black;
+  font-size: 0.8rem;
+  position: relative;
+  top: -25px;
+}
+
+.quiz-side ol {
+  background-color: #2c7e93;
+  padding: 5px 0;
+}
+
+.quiz-side ol li {
+  text-align: center;
+  color: white;
+  list-style-type: none;
+  padding: 0;
+}
+
 aside i {
   color: #ff8c1a;
 }
@@ -439,15 +488,39 @@ aside {
   color: black;
 }
 
+.location img {
+  width: 100%;
+  position: relative;
+  top: 50px;
+  border-top: 5px solid white;
+}
+
+.hours {
+  grid-area: hours;
+  padding: 0 20px 0 0px;
+  color: white;
+  padding-top: 50px;
+}
+
 @media screen and (min-width: 640px) {
   .mobile,
   label[for="hamburger-menu"] {
     display: none;
   }
 
+  .articles,
+  .article-section,
+  h1,
   .events,
-  .article-section {
-    padding-left: 20px;
+  #newsline,
+  .headline,
+  .additional,
+  .additionalsss,
+  .padding30px,
+  .location p,
+  .location h2,
+  .explore-together {
+    padding-left: 30px;
   }
 
   .desktop-tablet {
@@ -491,8 +564,7 @@ aside {
     left: 50px;
   }
 
-  .container,
-  .explore-section {
+  .container {
     display: block;
     padding: 20px 15px 0px 0;
   }
@@ -507,14 +579,13 @@ aside {
   .explore-section,
   .articles {
     display: grid;
-    padding: 50px 20px 0 25px;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
   }
 
   .special-events-page {
     display: grid;
-    grid-template-rows: auto;
+    grid-template-rows: auto auto;
     grid-template-areas:
       "banner banner"
       "headline headline"
@@ -527,15 +598,14 @@ aside {
     grid-template-rows: auto;
     grid-template-areas:
       "advert advert advert"
-      "newsline newsline newsline"
       "article article article"
       "article article article"
       "article article article";
   }
 
   .special-event {
+    padding-top: 50px;
     display: grid;
-    padding: 50px 15px;
     background-color: #3e908c;
     grid-template-columns: 60% auto;
     grid-template-rows: auto;
@@ -584,7 +654,6 @@ aside {
   #headline {
     font-size: 2.5rem;
     grid-area: headline;
-    padding: 20px;
   }
 
   .advertisement {
@@ -599,6 +668,10 @@ aside {
     font-size: 1.3rem;
   }
 
+  .events-index .container {
+    padding-left: 30px;
+  }
+
   ol,
   ol li {
     padding: 0 0 0 20px;
@@ -608,7 +681,6 @@ aside {
 
   .bulk-text p {
     width: 70%;
-    padding-left: 15px;
   }
 
   footer {
@@ -632,15 +704,19 @@ aside {
     background-color: #ff8c1a;
   }
 
-  #visit {
+  .visit {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 40%;
     grid-template-rows: auto;
     grid-template-areas:
       "info info"
-      ". hours"
-      ". hours"
+      "admission hours"
+      "access hours"
       "location location";
+  }
+
+  .access {
+    grid-area: access;
   }
 
   .infobox {
@@ -651,14 +727,13 @@ aside {
     grid-area: location;
   }
 
-  .hours {
-    grid-area: hours;
-    padding: 0 20px 0 70px;
-  }
-
   .textbox,
   .eventbox {
     height: 155px;
+  }
+
+  .additional .textbox {
+    top: -5px;
   }
 }
 
@@ -673,7 +748,6 @@ aside {
     display: block;
   }
 
-  .clubs-desktop .textbox > p,
   .container .cta,
   .headline a:last-of-type {
     display: none;
@@ -692,8 +766,7 @@ aside {
   }
 
   .explore-together {
-    gap: 5px;
-    padding: 20px;
+    padding: 30px;
   }
 
   .articles,
@@ -710,13 +783,12 @@ aside {
   }
 
   .special-event {
-    padding: 30px 30px;
     background-color: #3e908c;
     grid-template-columns: auto auto 5% 30%;
     grid-template-rows: 350px 450px 400px 400px;
     grid-template-areas:
-      "events events . quiz"
-      "events events . quiz"
+      "event event . quiz"
+      "event event . quiz"
       " additional additional additinal quiz"
       "ad ad ad ad";
   }
@@ -730,8 +802,13 @@ aside {
   }
 
   .events {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .events-index {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-area: event;
   }
 
   .hoverbox {
@@ -755,15 +832,6 @@ aside {
   .hero {
     margin: 0 0 -253px 0;
   }
-
-  /*
-  .articles,
-  .explore-section,
-  .darkblue-bg,
-  .lightblue-bg {
-    padding: 50px 100px;
-  }
-  */
 
   .headline,
   .infobox {
